@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.header-fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+}
+.contenedor1 {
+    margin: auto;
+    display: table;
+
+}
+
+h1 {
+    float: left;
+    color: #1b74e4;
+    position: relative;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+h1 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background-color: #fff;
+    border-left: 3px solid #000;
+
+    animation: maquina 5s infinite alternate steps(36);
+}
+
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-shadow: 0 0 3px;
+}
+
+header .icono{
+    color: #1b74e4;
+    font-size: 25px;
+}
+
+header a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.metaverso img{
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 94px;
+   
+}
+
+.metaverso h2{
+    position: absolute;
+    top:80px;
+    left: 20px;
+    color:#fff;
+}
+.perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.perfil img{
+    border-radius: 50%;
+}
+.perfil li{
+    list-style: none;
+}
+.perfil .amigosPerfil{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.boton1 {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1b74e4;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.boton1:hover{
+    background: rgb(120, 120, 228);
+}
+.boton2 {
+    text-decoration: none;
+    color: rgb(37, 35, 35);
+    background-color: #b7c0cb;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.boton2:hover{
+    background: rgb(205, 205, 209);
+}
+
+.menu2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-weight: bolder;
+}
+
+.menu2 a{
+    text-decoration: none;
+    color: rgb(81, 74, 74);
+
+}
+.menu2 a:hover{
+    text-decoration: underline;
+    color: #1b74e4;
+
+}
+
+
+
+.container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    min-width: 100px;
+    top: 60px;
+    // left: calc(50% - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 280px;
+    width: 200px;
+    background-color: #1b74e4;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    // left: 0px;
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  .bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+  }
+  
+  .emptybar {
+    background-color: #e8edf5;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    // z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0,154,217);
+    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+    transition: 0.6s ease-out;
+  }
+  
+  .card:hover .filledbar {
+    width: 70px;
+    transition: 0.4s ease-out;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+  }
+  
+  .stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+  }
+  
+  svg {
+    fill: #5f5d64;
+    stroke-width: 2px;
+  }
+  
+  .card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
